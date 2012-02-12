@@ -1,0 +1,96 @@
+@import "reset.less";
+@import "mixins.less";
+
+@darkGrey: #333;
+@lightGrey: #656565;
+
+html, body {
+    height: 100%;
+}
+
+body {
+    .radial-gradient(#fefefe, #bbb);
+    font-family: 'News Cycle', sans-serif;
+    color: @darkGrey;
+    text-shadow: 0px -1px @darkGrey, 0px 1px white;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Droid Sans', sans-serif;
+    margin: 15px auto;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 28px;
+    letter-spacing: -2px;
+    color: @lightGrey;
+}
+
+li {
+    display: inline;
+    font-size: 22px;
+    margin: 20px 10px;
+}
+
+img {
+    position: absolute;
+    margin-top: -135px;
+    right: -190px;
+    border: solid white;
+    border-width: 15px 15px 25px 15px;
+    .box-shadow(2px 2px 10px @darkGrey);
+    .rotate(5deg);
+}
+
+a {
+    color: @darkGrey;
+    &:link, &:visited {
+        text-decoration: none;
+    }
+    &:hover, &:active {
+        text-decoration: underline;
+    }
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+    margin: 100px auto 0 -200px;
+}
+
+/* Mobile (Landscape) */
+@media only screen and (max-width: 480px) {
+    .container {
+        margin: 15px auto 0 -170px;
+    }
+
+    img {
+        width: 100px;
+        margin-top: -115px;
+        right: -160px;
+    }
+}
+
+/* Mobile (Portrait) */
+@media only screen and (max-width: 320px) {
+    .container {
+        margin: 0 auto;
+    }
+
+    img {
+        width: 110px;
+        position: relative;
+        margin: 20px auto;
+        right: auto;
+    }
+
+    li {
+        display: block;
+        margin: 20px auto;
+    }
+}
